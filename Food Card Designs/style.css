@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;1,300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    transition: .5s;
+}
+body{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background: var(--bodybg-color);
+    border: 16px solid var(--bodyborder-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-theme{
+    --primary-color: #092c3e;
+    --secondary-color: #fff;
+    --bodybg-color: #121c22;
+    --bodyborder-color: #1d2427;
+}
+
+:root{
+    --bodybg-color: #EEEEEE;
+    --primary-color: #fff;
+    --secondary-color: #092c3e;
+    --bodyborder-color: #D8D8D8;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.check{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #092c3e;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in .5s;
+    position: absolute;
+    top: 2%;
+}
+
+input[type="checkbox"]:checked ~ .check{
+    background: #fff;
+    /* box-shadow: 0 0 0 1200px #092c3e; */
+}
+
+.check:before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+input[type="checkbox"]:checked ~ .check:before{
+    transform: translate(-50px);
+}
+
+.check:after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #092c3e;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: .5s;
+    transform: translate(50px);
+}
+
+input[type="checkbox"]:checked ~ .check:after{
+    transform: translate(0px);
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    /* border: 2px solid red; */
+}
+
+.cards{
+    width: 19%;
+    background: var(--primary-color);
+    margin: 40px;
+    height: 528px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.info-icon{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    
+}
+
+
+
+
+
+.ellipse{
+    width: 24px;
+    height: 24px;
+    background-color: #F8593B;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+.circles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 0px 57px;
+}
+.info-header{
+    display: flex;
+   
+}
+
+
+.cards .header{
+    font-family: 'DM Serif Display';
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: 0.01em;
+    padding: 32px 0px 24px 24px;
+    /* border: 2px solid red; */
+    color: var(--secondary-color);
+}
+.cards .photos{
+    height: 216px;
+}
+
+.text{
+    padding: 0px 24px 24px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #6E798C;
+    /* border: 1px solid red; */
+}
+
+.some-p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 2px solid black; */
+    width: 95%;
+    margin: auto;
+    padding-bottom: 24px;
+}
+
+.some-p .lil-txt{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    color: #A5ADBB;
+    /* border: 2px solid red; */
+    margin-right: 5%;
+}
+
+.order-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 0px 24px;
+}
+
+.price{
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 25px;
+    color: var(--secondary-color);
+}   
+
+.def-price{
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    text-decoration-line: line-through;
+    color: #F8593B;
+}
+
+.btn{
+    width: 144px;
+    height: 44px;
+    /* padding: 15px 45px 15px; */
+    color: white;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: #2ECC71;
+    border-radius: 4px;
+    cursor: pointer;
+}
