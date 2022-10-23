@@ -65,7 +65,7 @@ input[type="checkbox"]:checked ~ .check{
 }
 
 input[type="checkbox"]:checked ~ .check:before{
-    transform: translate(-50px);
+    transform: translate(20px);
 }
 
 .check:after{
@@ -78,11 +78,11 @@ input[type="checkbox"]:checked ~ .check:before{
     height: 16px;
     border-radius: 50%;
     transition: .5s;
-    transform: translate(50px);
+    transform: translate(-20px);
 }
 
 input[type="checkbox"]:checked ~ .check:after{
-    transform: translate(0px);
+    transform: translate(20px);
 }
 
 .main-container{
